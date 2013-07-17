@@ -125,6 +125,10 @@ class Client(object):
             if key in path and kw != 'data':
                 path = path.replace(key, method_kw.pop(kw))
 
+        if not self.description.base_url.endswith('/'):
+            self.description.base_url += '/'
+        path = path.lstrip('/')
+
         url = urljoin(self.description.base_url, path)
 
         define_format(method_kw, definition)
