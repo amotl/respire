@@ -1,6 +1,6 @@
 *~
 *.pyc
-
+/.venv27
 dist/
 d2to1*/
 *.egg-info/
